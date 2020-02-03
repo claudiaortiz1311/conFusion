@@ -64,9 +64,7 @@
             </li>
           </ul>
           <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal">
-              <span class="fa fa-sign-in"></span> Login
-            </a>
+            <a id="openLogin"> <span class="fa fa-sign-in"></span> Login </a>
           </span>
         </div>
       </div>
@@ -251,8 +249,7 @@
           <div class="col-12 col-sm-2 align-self-center">
             <a
               class="btn btn-warning btn-sm btn-block"
-              data-toggle="modal"
-              data-target="#reserveModal"
+              id="openReserve"
               role="button"
             >
               Reserve Table</a
@@ -531,6 +528,20 @@
           .children("span")
           .addClass("fa-pause");
       }
+    });
+  </script>
+  <!--Aca van los scripts de los modal-->
+  <script>
+    $(document).ready(function() {
+      $("#openLogin").click(function() {
+        $("#loginModal").modal();
+      });
+    });
+
+    $(document).ready(function() {
+      $("#openReserve").click(function() {
+        $("#reserveModal").modal();
+      });
     });
   </script>
 </html>
